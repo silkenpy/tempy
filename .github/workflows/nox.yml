@@ -16,7 +16,7 @@ jobs:
         python-version: ${{ matrix.python-version }}
     - name: Install dependencies
       run: |
-        apt install nox
+        sudo apt install -y nox
     - name: Nox pipelines
       run: |
         nox -s black $(git ls-files '*.py')
