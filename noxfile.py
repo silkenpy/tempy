@@ -5,7 +5,7 @@ from typing import Any
 import nox
 from nox.sessions import Session
 
-PACKAGE_NAME = "scheduler"
+PACKAGE_NAME = "tempy"
 nox.options.sessions = (
     "black",
     "pylint",
@@ -19,7 +19,7 @@ nox.options.sessions = (
     "coverage",
     # "docs",
 )
-locations = "scheduler", "tests", "noxfile.py"
+locations = "tempy", "tests", "noxfile.py"
 
 
 def install_with_constraints(session: Session, *args: str, **kwargs: Any) -> None:
