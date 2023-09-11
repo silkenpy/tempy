@@ -30,3 +30,6 @@ jobs:
     - name: Pylint
       run: |
         nox -s pylint
+    - name: mypy
+      run: |
+        nox -s mypy
