@@ -24,6 +24,9 @@ jobs:
     - name: Install dependencies
       run: |
         sudo apt install -y nox
-    - name: Nox pipelines
+    - name: Black
       run: |
         nox -s black 
+    - name: Pylint
+      run: |
+        nox -s pylint
