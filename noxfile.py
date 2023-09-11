@@ -47,7 +47,7 @@ def install_with_constraints(session: Session, *args: str, **kwargs: Any) -> Non
             f"--output={requirements.name}",
             external=True,
         )
-        session.install(f"--constraint={requirements.name} --use-deprecated=legacy-resolver ", *args, **kwargs)
+        session.install(f"--constraint={requirements.name}", "--use-deprecated=legacy-resolver", *args, **kwargs)
 
 
 @nox.session(python="3.10")
