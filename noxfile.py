@@ -43,12 +43,11 @@ def install_with_constraints(session: Session, *args: str, **kwargs: Any) -> Non
             "poetry",
             "export",
             "--dev",
-            "--without-hashes",
             "--format=requirements.txt",
             f"--output={requirements.name}",
             external=True,
         )
-        session.install(f"--constraint={requirements.name}", *args, **kwargs)
+        session.install(f"--use-deprecated=legacy-resolver --constraint={requirements.name}", *args, **kwargs)
 
 
 @nox.session(python="3.10")
