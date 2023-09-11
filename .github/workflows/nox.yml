@@ -33,3 +33,6 @@ jobs:
     - name: mypy
       run: |
         nox -s mypy
+    - name: typeguard
+      run: |
+        nox -s typeguard        
