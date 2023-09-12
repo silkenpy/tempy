@@ -35,4 +35,13 @@ jobs:
         nox -s mypy
     - name: typeguard
       run: |
-        nox -s typeguard        
+        nox -s typeguard
+    - name: safety
+      run: |
+        nox -s safety
+    - name: pytest
+      run: |
+        nox -s tests
+    - name: coverage
+      run: |
+        nox -s coverage
