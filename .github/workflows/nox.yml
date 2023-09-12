@@ -30,18 +30,21 @@ jobs:
     - name: Pylint
       run: |
         nox -s pylint
-    - name: mypy
+    - name: Mypy
       run: |
         nox -s mypy
-    - name: typeguard
+    - name: Pytype
+      run: |
+        nox -s pytype
+    - name: Typeguard
       run: |
         nox -s typeguard
-    - name: safety
+    - name: Safety
       run: |
         nox -s safety
     - name: pytest
       run: |
         nox -s tests
-    - name: coverage
+    - name: Coverage
       run: |
         nox -s coverage
