@@ -15,7 +15,7 @@ nox.options.sessions = (
     "typeguard",
     # "safety",
     # "xdoctest",
-    "tests",
+    "pytest",
     "coverage",
     # "docs",
 )
@@ -109,7 +109,7 @@ def pytype(session: Session) -> None:
 
 
 @nox.session(python="3.10")
-def tests(session: Session) -> None:
+def pytest(session: Session) -> None:
     """Run the test suite."""
     args = session.posargs or [
         "--cov",

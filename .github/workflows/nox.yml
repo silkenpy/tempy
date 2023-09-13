@@ -44,7 +44,13 @@ jobs:
         nox -s safety
     - name: pytest
       run: |
-        nox -s tests
+        nox -s pytest
     - name: Coverage
       run: |
         nox -s coverage
+    - name: Docs
+      run: |
+        nox -s docs
+    - name: XDocTest
+      run: |
+        nox -s xdoctest
