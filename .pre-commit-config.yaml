@@ -25,3 +25,27 @@ repos:
         entry: poetry run mypy
         language: system
         types: [python]
+    -   id: pytype
+        name: pytype
+        exclude: ^experimental/
+        entry: poetry run pytype
+        language: system
+        types: [python]
+    -   id: typeguard
+        name: typeguard
+        exclude: ^experimental/
+        entry: poetry run pytest --typeguard-packages=tempy
+        language: system
+        types: [python]
+    -   id: pytest
+        name: pytest
+        exclude: ^experimental/
+        entry: poetry run pytest --cov --verbose --junit-xml unit_tests.xml tests
+        language: system
+        types: [python]
+    -   id: coverage
+        name: coverage
+        exclude: (noxfile.py|^experimental/)
+        entry: poetry run coverage report --fail-under=80
+        language: system
+        types: [python]

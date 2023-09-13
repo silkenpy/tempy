@@ -113,8 +113,8 @@ def pytest(session: Session) -> None:
     """Run the test suite."""
     args = session.posargs or [
         "--cov",
-        "-m",
-        "not e2e",
+        # "-m",
+        # "not e2e",
         "--verbose",
         "--junit-xml",
         "unit_tests.xml",

@@ -1,2 +1,2 @@
 # tempy
-A complete template for starting python 
+A complete template for starting python

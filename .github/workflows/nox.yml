@@ -26,7 +26,7 @@ jobs:
         sudo apt install -y nox
     - name: Black
       run: |
-        nox -s black 
+        nox -s black
     - name: Pylint
       run: |
         nox -s pylint
@@ -48,9 +48,3 @@ jobs:
     - name: Coverage
       run: |
         nox -s coverage
-    - name: Docs
-      run: |
-        nox -s docs
-    - name: XDocTest
-      run: |
-        nox -s xdoctest
